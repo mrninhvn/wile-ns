@@ -25,10 +25,10 @@ node_modules/
 coverage.txt
 
 # Ignore any pcap
-*.pcap
+# *.pcap
 
 # Ignore replay files
-*.replay
+# *.replay
 
 # ignore OTNS executives
 /cmd/otns/otns
