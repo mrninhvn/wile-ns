@@ -86,7 +86,7 @@ var (
 func parseArgs() {
 	defaultOtCli := os.Getenv("OTNS_OT_CLI")
 	if defaultOtCli == "" {
-		defaultOtCli = "./ot-cli-ftd"
+		defaultOtCli = "./wile-router"
 	}
 
 	flag.StringVar(&args.Speed, "speed", "1", "set simulating speed")

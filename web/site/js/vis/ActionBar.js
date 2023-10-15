@@ -74,16 +74,16 @@ export default class ActionBar extends VObject {
         this.addButton(">>", "any", "speed", (e) => {
             this.actionSpeedUp()
         });
-        this.addButton("New Router", "any", "add", (e) => {
+        this.addButton("Router Device", "any", "add", (e) => {
             this.actionNewRouter(e)
         });
-        this.addButton("FED", "any", "add", (e) => {
+        this.addButton("Device", "any", "add", (e) => {
             this.actionNewFED(e)
         });
-        this.addButton("MED", "any", "add", (e) => {
+        this.addButton("End Device", "any", "add", (e) => {
             this.actionNewMED(e)
         });
-        this.addButton("SED", "any", "add", (e) => {
+        this.addButton("Battery End Device", "any", "add", (e) => {
             this.actionNewSED(e)
         });
         this.addButton("Clear", "any", "del", (e) => {

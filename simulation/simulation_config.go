@@ -34,7 +34,7 @@ const (
 	DefaultExtPanid        = "dead00beef00cafe"
 	DefaultMeshLocalPrefix = "fdde:ad00:beef:0::"
 	DefaultNetworkKey      = "00112233445566778899aabbccddeeff"
-	DefaultNetworkName     = "otns"
+	DefaultNetworkName     = "wile"
 	DefaultPanid           = 0xface
 	DefaultPskc            = "3aa55f91ca47d1e4e71a08cb35e91591"
 	DefaultSecurityPolicy  = "672 onrc"
@@ -62,7 +62,7 @@ func DefaultConfig() *Config {
 		Speed:          1,
 		ReadOnly:       false,
 		RawMode:        false,
-		OtCliPath:      "./ot-cli-ftd",
+		OtCliPath:      "./wile-router",
 		Real:           false,
 		DispatcherHost: "localhost",
 		DispatcherPort: threadconst.InitialDispatcherPort,

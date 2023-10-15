@@ -3,17 +3,17 @@
   "version": "0.0.1",
   "description": "otns-web site",
   "devDependencies": {
-    "@grpc/proto-loader": "^0.3.0",
-    "google-protobuf": "^3.6.1",
-    "grpc": "^1.15.0",
-    "grpc-web": "^1.0.0",
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "@grpc/proto-loader": "^0.7.10",
+    "google-protobuf": "^3.21.2",
+    "grpc": "^1.24.11",
+    "grpc-web": "^1.4.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "pixi-scrollbox": "2.1.5",
-    "pixi-viewport": "^4.13.2",
-    "pixi.js-legacy": "^5.3.3",
-    "pixi.js": "^5.3.3"
+    "pixi-scrollbox": "2.3.1",
+    "pixi-viewport": "^4.38.0",
+    "pixi.js-legacy": "^6.5.10",
+    "pixi.js": "^6.5.10"
   }
 }

@@ -25,7 +25,8 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 import PixiVisualizer from "./vis/PixiVisualizer";
-import * as PIXI from 'pixi.js'
+import * as PIXI from 'pixi.js-legacy'
+import { Loader } from 'pixi.js-legacy';
 import {SetResources} from "./vis/resources";
 
 const {
@@ -47,7 +48,7 @@ let [w, h] = getDesiredFieldSize();
 let app = new PIXI.Application({
     width: w,
     height: h,
-    // backgroundColor: 0xdddddd,
+    backgroundColor: 0xdddddd,
     transparent: true,
     autoDensity: true,
     antialias: true,
@@ -197,8 +198,9 @@ function loadOk() {
         // stream end signal
     });
 }
-
-app.loader
+// loadOk()
+const loader = new Loader();
+loader
     .add('WhiteSolidCircle64', '/static/image/white-shapes/circle-64.png')
     .add('WhiteSolidTriangle64', '/static/image/white-shapes/triangle-64.png')
     .add('WhiteSolidHexagon64', '/static/image/white-shapes/hexagon-64.png')

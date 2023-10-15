@@ -101,7 +101,7 @@ export default class PixiVisualizer extends VObject {
 
         this.otVersion = "";
         this.otCommit = "";
-        this.otCommitIdMsg = new Text("OpenThread Version: ", {
+        this.otCommitIdMsg = new Text("", {
             fill: "#0052ff",
             fontFamily: "Verdana",
             fontSize: 13,
@@ -110,10 +110,10 @@ export default class PixiVisualizer extends VObject {
         });
         this.otCommitIdMsg.position.set(this.statusMsg.x, this.statusMsg.y + this.statusMsg.height + 3);
         this.otCommitIdMsg.interactive = true;
-        this.otCommitIdMsg.setOnTap((e) => {
-            window.open('https://github.com/openthread/openthread/commit/' + this.otCommit, '_blank');
-            e.stopPropagation();
-        });
+        // this.otCommitIdMsg.setOnTap((e) => {
+        //     window.open('https://github.com/openthread/openthread/commit/' + this.otCommit, '_blank');
+        //     e.stopPropagation();
+        // });
         this.addChild(this.otCommitIdMsg);
         this.setOTVersion("", "main");
 
@@ -203,7 +203,7 @@ export default class PixiVisualizer extends VObject {
     setOTVersion(version, commit) {
         this.otVersion = version;
         this.otCommit = commit;
-        this.otCommitIdMsg.text = "OpenThread Version: " + version + " (" + commit + ")";
+        // this.otCommitIdMsg.text = "OpenThread Version: " + version + " (" + commit + ")";
     }
 
     setReal(real) {
@@ -229,12 +229,12 @@ export default class PixiVisualizer extends VObject {
     }
 
     updateStatusMsg() {
-        this.statusMsg.text = "OTNS-Web | FPS=" + Math.round(ticker.FPS) + " | "
-            + this.getNodeCountByRole(OtDeviceRole.OT_DEVICE_ROLE_LEADER) + " leaders "
+        this.statusMsg.text = "WiLe-Web | FPS=" + Math.round(ticker.FPS) + " | "
+            + this.getNodeCountByRole(OtDeviceRole.OT_DEVICE_ROLE_LEADER) + " controllers "
             + this.getNodeCountByRole(OtDeviceRole.OT_DEVICE_ROLE_ROUTER) + " routers "
             + this.getNodeCountByRole(OtDeviceRole.OT_DEVICE_ROLE_CHILD) + " EDs "
             + this.getNodeCountByRole(OtDeviceRole.OT_DEVICE_ROLE_DETACHED) + " detached"
-            + " | SPEED=" + Math.round(this.curSpeed * 10) / 10 + " | TIME=" + this.formatTime();
+            + " | TIME=" + this.formatTime();
     }
 
     getNodeCountByRole(role) {
@@ -680,7 +680,7 @@ export default class PixiVisualizer extends VObject {
         secs = secs % 3600;
         let m = Math.floor(secs / 60);
         secs = secs % 60;
-        return d + "d" + h + "h" + m + "m" + secs + "s"
+        return d + "d-" + h + "h" + m + "m" + secs + "s"
     }
 
     createUnicastMessage(src, dst, mvInfo) {

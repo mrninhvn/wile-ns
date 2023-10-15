@@ -36,7 +36,7 @@ main()
     (
         cd "$sitedir"
         npm install
-        npx webpack ./js/visualize.js -o ./static/js/visualize.js
+        npx webpack ./js/visualize.js --output-path ./static/js/
 
         go-bindata -pkg web_site -o _bindata.go templates/... static/...
         head -26 bindata.go >_merge_bindata.go
